@@ -371,6 +371,7 @@ vmax – наибольшее из (vw, vh)
 .container {
   width: 95vw;
   margin: 0 auto;
+  padding: 1vw 0;
 }
 
 .main {
@@ -378,24 +379,46 @@ vmax – наибольшее из (vw, vh)
 }
 
 body {
+  height: 400vh;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), #ffffff;
   font-family: "Lato", sans-serif;
 }
 body header {
   background: radial-gradient(41.72% 84.72% at 41.76% 96.93%, #ffb51b 0%, #ffcd64 100%);
-  margin-bottom: 50px;
+  margin-bottom: 35vh;
 }
 body header .header_inner {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+body header .header_inner-btns {
+  position: fixed;
+  left: 10%;
+  top: 93%;
+  display: flex;
+  z-index: 1;
+}
+body header .header_inner-btns-btn {
+  margin-right: 1vw;
+  box-shadow: 0px 5px 20px -8px rgba(126, 76, 47, 0.6);
+  border-radius: 100px;
+  padding: 1vw 2.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 0.8vw;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  border: none;
+  background: #fff;
+}
 body header .header_inner-lg {
-  width: 8vw;
-  height: 6vh;
+  width: 9vw;
+  height: 6vw;
   background: url(../img/logo.svg) center center no-repeat;
-  background-size: cover;
-  margin-bottom: 5%;
+  background-size: contain;
 }
 body header .header_inner-info {
   display: flex;
@@ -411,7 +434,7 @@ body header .header_inner-info-img {
 }
 body header .header_inner-info-img-inner {
   position: relative;
-  margin-bottom: -3px;
+  margin-bottom: -4%;
 }
 body header .header_inner-info-img-inner img {
   width: 30vw;
@@ -442,6 +465,7 @@ body header .header_inner-info-text h2 {
   font-size: 1.93vw;
   margin-top: 0;
   margin-bottom: 3vw;
+  color: #462f29;
 }
 body header .header_inner-info-text .header_inner-info-btns {
   display: flex;
@@ -454,12 +478,12 @@ body header .header_inner-info-text .header_inner-info-btns-btn {
 body header .header_inner-info-text .header_inner-info-btns-btn.btn1 {
   box-shadow: 0px 5px 20px -8px rgba(126, 76, 47, 0.6);
   border-radius: 100px;
-  padding: 0.9vw 1.9vw;
+  padding: 1vw 2.5vw;
   display: flex;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  font-size: 0.9vw;
+  font-size: 0.8vw;
   font-weight: 700;
   letter-spacing: 0.08em;
   border: none;
@@ -469,12 +493,12 @@ body header .header_inner-info-text .header_inner-info-btns-btn.btn1 {
 body header .header_inner-info-text .header_inner-info-btns-btn.btn2 {
   box-shadow: 0px 5px 20px -8px rgba(126, 76, 47, 0.6);
   border-radius: 100px;
-  padding: 0.9vw 1.9vw;
+  padding: 1vw 2.5vw;
   display: flex;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  font-size: 0.9vw;
+  font-size: 0.8vw;
   font-weight: 700;
   letter-spacing: 0.08em;
   border: none;
@@ -484,28 +508,8 @@ body .container.task {
   width: 80vw;
   margin: 0 auto;
 }
-body .container.task .task_list-btns {
-  position: sticky;
-  top: 10%;
-  display: flex;
-  margin-bottom: 20%;
-}
-body .container.task .task_list-btns-btn {
-  margin-right: 1vw;
-  box-shadow: 0px 5px 20px -8px rgba(126, 76, 47, 0.6);
-  border-radius: 100px;
-  padding: 0.9vw 1.9vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-  font-size: 0.9vw;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  border: none;
-  background: #fff;
-}
 body .container.task .task_list-inner {
+  margin-bottom: 35vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -519,17 +523,56 @@ body .container.task .task_list-inner-item {
 body .container.task .task_list-inner-item-text {
   width: 40vw;
 }
-body .container.task .task_list-inner-item-text-title {
-  margin-bottom: 1vw;
+body .container.task .task_list-inner-item-text-info {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
 }
-body .container.task .task_list-inner-item-text h2 {
+body .container.task .task_list-inner-item-text-info-title {
+  margin-bottom: 5vh;
+}
+body .container.task .task_list-inner-item-text-info h2 {
   font-weight: 800;
   margin: 1px 0;
   font-size: 2.6vw;
 }
-body .container.task .task_list-inner-item-text h3 {
+body .container.task .task_list-inner-item-text-info h3 {
   margin: 1px 0;
   color: rgba(0, 0, 0, 0.6);
   font-weight: 400;
-  font-size: 1.6vw;
+  font-size: 1.4vw;
+}
+body .container.task .task_list-inner-item-img figure {
+  background-image: url(../img/shadow.svg);
+  position: relative;
+  width: 210px;
+  height: 419px;
+}
+body .container.task .task_list-inner-item-img figure .base {
+  position: absolute;
+  z-index: 2;
+  width: 349px;
+  height: 513px;
+  background-size: 349px 513px;
+  background-repeat: no-repeat;
+  background-image: url(../img/telephone_base.svg);
+}
+body .container.task .task_list-inner-item-img figure .phone-mockup {
+  position: absolute;
+  width: 189px;
+  height: 408px;
+  background-size: 189px 408px;
+  background-repeat: no-repeat;
+  background-image: url(../img/phoneMockup1.svg);
+  z-index: 1;
+}
+body .container.task .task_list-inner-item-img-max {
+  background: url(../img/phoneMockup1.svg) center center no-repeat;
+  transition: 5ms;
+  background-size: contain;
+  width: 30vw;
+  height: 40vh;
+}
+body .container.task .task_list-inner-item-img-max:hover {
+  background: url(../img/phoneMockup2.svg) center center no-repeat;
 }
