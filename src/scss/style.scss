@@ -9,9 +9,11 @@ vh – 1% высоты окна
 vmin – наименьшее из (vw, vh), в IE9 обозначается vm
 vmax – наибольшее из (vw, vh)
 */
+
 .container {
   width: 95vw;
   margin: 0 auto;
+  padding: 1vw 0;
 }
 .main {
   overflow-x: hidden;
@@ -19,42 +21,50 @@ vmax – наибольшее из (vw, vh)
 @mixin btn-style($bgcolor) {
   box-shadow: 0px 5px 20px -8px rgba(126, 76, 47, 0.6);
   border-radius: 100px;
-  padding: 0.9vw 1.9vw;
+  padding: 1vw 2.5vw;
   display: flex;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  font-size: 0.9vw;
+  font-size: 0.8vw;
   font-weight: 700;
   letter-spacing: 0.08em;
   border: none;
   background: $bgcolor;
 }
 body {
+  height: 400vh;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), #ffffff;
-
   font-family: "Lato", sans-serif;
   ////HEADER/////////////////////////////////////////////////////////////////////////////////
   header {
     background: radial-gradient(41.72% 84.72% at 41.76% 96.93%, #ffb51b 0%, #ffcd64 100%);
-    margin-bottom: 50px;
+    margin-bottom: 35vh;
     .header_inner {
       display: flex;
       flex-direction: column;
       align-items: center;
-
+      &-btns {
+        position: fixed;
+        left: 10%;
+        top: 93%;
+        display: flex;
+        z-index: 1;
+        &-btn {
+          margin-right: 1vw;
+          @include btn-style(#fff);
+        }
+      }
       &-lg {
-        width: 8vw;
-        height: 6vh;
-        background: url(../img/logo.svg) 100% 100% no-repeat;
+        width: 9vw;
+        height: 6vw;
+        background: url(../img/logo.svg) center center no-repeat;
         background-size: contain;
-        margin-bottom: 5%;
       }
       &-info {
         display: flex;
         width: 95vw;
         justify-content: space-between;
-
         &-img {
           padding-top: 8vw;
           width: 35vw;
@@ -63,7 +73,7 @@ body {
           margin-right: 15vw;
           &-inner {
             position: relative;
-            margin-bottom: -3px;
+            margin-bottom: -4%;
             img {
               width: 30vw;
             }
@@ -94,6 +104,7 @@ body {
             font-size: 1.93vw;
             margin-top: 0;
             margin-bottom: 3vw;
+            color: rgba(70, 47, 41, 1);
           }
           .header_inner-info-btns {
             display: flex;
@@ -118,19 +129,8 @@ body {
   .container.task {
     width: 80vw;
     margin: 0 auto;
-    .task_list {
-      &-btns {
-        position: sticky;
-        top: 10%;
-        display: flex;
-        margin-bottom: 20%;
-        &-btn {
-          margin-right: 1vw;
-          @include btn-style(#fff);
-        }
-      }
-    }
     .task_list-inner {
+      margin-bottom: 35vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -141,26 +141,64 @@ body {
         align-items: center;
         &-text {
           width: 40vw;
-          &-title {
-            margin-bottom: 1vw;
-          }
+          &-info {
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            &-title {
+              margin-bottom: 5vh;
+            }
 
-          h2 {
-            font-weight: 800;
-            margin: 1px 0;
-            font-size: 2.6vw;
-          }
-          h3 {
-            margin: 1px 0;
-            color: rgba(0, 0, 0, 0.6);
-            font-weight: 400;
-            font-size: 1.6vw;
+            h2 {
+              font-weight: 800;
+              margin: 1px 0;
+              font-size: 2.6vw;
+            }
+            h3 {
+              margin: 1px 0;
+              color: rgba(0, 0, 0, 0.6);
+              font-weight: 400;
+              font-size: 1.4vw;
+            }
           }
         }
 
         &-img {
-          &-max {
+          figure {
+            background-image: url(../img/shadow.svg);
+            position: relative;
+            width: 210px;
+            height: 419px;
+            .base {
+              position: absolute;
+              z-index: 2;
+              width: 349px;
+              height: 513px;
+              background-size: 349px 513px;
+              background-repeat: no-repeat;
+              background-image: url(../img/telephone_base.svg);
+            }
+            .phone-mockup {
+              position: absolute;
+              width: 189px;
+              height: 408px;
+              background-size: 189px 408px;
+              background-repeat: no-repeat;
+              background-image: url(../img/phoneMockup1.svg);
+              z-index: 1;
+            }
           }
+          &-max {
+            background: url(../img/phoneMockup1.svg) center center no-repeat;
+            transition: 5ms;
+            background-size: contain;
+            width: 30vw;
+            height: 40vh;
+            &:hover {
+              background: url(../img/phoneMockup2.svg) center center no-repeat;
+            }
+          }
+
           &-min {
           }
         }
