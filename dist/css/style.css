@@ -383,7 +383,7 @@ body {
 }
 body header {
   background: radial-gradient(41.72% 84.72% at 41.76% 96.93%, #ffb51b 0%, #ffcd64 100%);
-  margin-bottom: 150px;
+  margin-bottom: 50px;
 }
 body header .header_inner {
   display: flex;
@@ -391,10 +391,10 @@ body header .header_inner {
   align-items: center;
 }
 body header .header_inner-lg {
-  width: 8rem;
-  height: 6rem;
-  background: url(../img/logo.svg) 100% 100% no-repeat;
-  background-size: contain;
+  width: 8vw;
+  height: 6vh;
+  background: url(../img/logo.svg) center center no-repeat;
+  background-size: cover;
   margin-bottom: 5%;
 }
 body header .header_inner-info {
@@ -403,6 +403,7 @@ body header .header_inner-info {
   justify-content: space-between;
 }
 body header .header_inner-info-img {
+  padding-top: 8vw;
   width: 35vw;
   display: flex;
   align-items: end;
@@ -410,6 +411,7 @@ body header .header_inner-info-img {
 }
 body header .header_inner-info-img-inner {
   position: relative;
+  margin-bottom: -3px;
 }
 body header .header_inner-info-img-inner img {
   width: 30vw;
@@ -426,7 +428,7 @@ body header .header_inner-info-text {
   width: 50vw;
   display: flex;
   flex-direction: column;
-  padding: 3vw 0;
+  padding: 2vw 0;
 }
 body header .header_inner-info-text h1 {
   line-height: 4vw;
@@ -435,6 +437,7 @@ body header .header_inner-info-text h1 {
   color: #ffffff;
 }
 body header .header_inner-info-text h2 {
+  width: 41vw;
   font-weight: 400;
   font-size: 1.93vw;
   margin-top: 0;
@@ -445,11 +448,13 @@ body header .header_inner-info-text .header_inner-info-btns {
   flex-wrap: wrap;
 }
 body header .header_inner-info-text .header_inner-info-btns-btn {
-  margin-right: 24px;
-  margin-bottom: 20px;
+  margin-right: 1vw;
+  margin-bottom: 1vw;
+}
+body header .header_inner-info-text .header_inner-info-btns-btn.btn1 {
   box-shadow: 0px 5px 20px -8px rgba(126, 76, 47, 0.6);
   border-radius: 100px;
-  padding: 0.9rem 1.9rem;
+  padding: 0.9vw 1.9vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -457,23 +462,53 @@ body header .header_inner-info-text .header_inner-info-btns-btn {
   font-size: 0.9vw;
   font-weight: 700;
   letter-spacing: 0.08em;
-}
-body header .header_inner-info-text .header_inner-info-btns-btn.btn1 {
-  background: #161312;
+  border: none;
+  background: #000;
   color: #fff;
 }
-body header .header_inner-info-text .header_inner-info-btns-btn.btn2, body header .header_inner-info-text .header_inner-info-btns-btn.btn3 {
+body header .header_inner-info-text .header_inner-info-btns-btn.btn2 {
+  box-shadow: 0px 5px 20px -8px rgba(126, 76, 47, 0.6);
+  border-radius: 100px;
+  padding: 0.9vw 1.9vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 0.9vw;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  border: none;
   background: #fff;
 }
 body .container.task {
-  width: 90vw;
+  width: 80vw;
   margin: 0 auto;
+}
+body .container.task .task_list-btns {
+  position: sticky;
+  top: 10%;
+  display: flex;
+  margin-bottom: 20%;
+}
+body .container.task .task_list-btns-btn {
+  margin-right: 1vw;
+  box-shadow: 0px 5px 20px -8px rgba(126, 76, 47, 0.6);
+  border-radius: 100px;
+  padding: 0.9vw 1.9vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 0.9vw;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  border: none;
+  background: #fff;
 }
 body .container.task .task_list-inner {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 90vw;
 }
 body .container.task .task_list-inner-item {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), #ffffff;
@@ -484,34 +519,17 @@ body .container.task .task_list-inner-item {
 body .container.task .task_list-inner-item-text {
   width: 40vw;
 }
+body .container.task .task_list-inner-item-text-title {
+  margin-bottom: 1vw;
+}
 body .container.task .task_list-inner-item-text h2 {
   font-weight: 800;
-  font-size: 2.6rem;
+  margin: 1px 0;
+  font-size: 2.6vw;
 }
 body .container.task .task_list-inner-item-text h3 {
+  margin: 1px 0;
   color: rgba(0, 0, 0, 0.6);
   font-weight: 400;
-  font-size: 1.6rem;
-}
-body .container.task .task_list-inner-item-img {
-  width: 210px;
-  height: 419px;
-  position: relative;
-}
-body .container.task .task_list-inner-item-img-max {
-  background-image: url(../img/telephone_base.svg);
-  width: 349px;
-  height: 513px;
-  background-size: 349px 513px;
-  background-repeat: no-repeat;
-  z-index: 2;
-  position: absolute;
-}
-body .container.task .task_list-inner-item-img-min {
-  width: 189px;
-  height: 408px;
-  background-size: 189px 408px;
-  background-repeat: no-repeat;
-  position: absolute;
-  background-image: url(../img/phoneMockup1.svg);
+  font-size: 1.6vw;
 }
