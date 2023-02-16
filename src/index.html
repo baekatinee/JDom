@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  @@include('html/head.html',{ "title": "Главная" })
-  <body>
-    <div class="wrapper">
-      @@include('html/header.html',{})
-      <main>
-      </main>
-      @@include('html/footer.html',{})
-      <section class="task_list">
-        <div class="container task">
-          <div class="task_list-inner">
-            <div class="task_list-inner-item task1">
-              <div class="task_list-inner-item-text">
+@@include('html/head.html',{ "title": "Главная" })
+
+<body>
+  <div class="wrapper">
+    @@include('html/header.html',{})
+    <main>
+    </main>
+    @@include('html/footer.html',{})
+    <section class="task_list">
+      <div class="container task">
+        <div class="task_list-btns">
+          <button class="task_list-btns-btn">
+            Как это работает
+          </button>
+          <button class="task_list-btns-btn">
+            Тарифы
+          </button>
+        </div>
+        <div class="task_list-inner">
+          <div class="task_list-inner-item task1">
+            <div class="task_list-inner-item-text">
+              <div class="task_list-inner-item-text-title">
                 <h2>
-                  Забудьте о проблемах при общении с заказчиком
+                  Забудьте о проблемах
                 </h2>
-                <h3>Определяйте работы и сроки выполнения на начальном этапе</h3>
+                <h2>
+                при общении с заказчиком
+                </h2>
               </div>
-              <div class="task_list-inner-item-img task1">
-                <div class="task_list-inner-item-img-max">
-
-                </div>
-                <div class="task_list-inner-item-img-min">
-
-                </div>
-              
+              <div class="task_list-inner-item-text-subtitle">
+                <h3>Определяйте работы и сроки выполнения </h3>
+                <h3> на начальном этапе</h3>
               </div>
             </div>
-            <!-- <div class="task_list-inner-item task2">
+            <div class="task_list-inner-item-img task1">
+              <div class="task_list-inner-item-img-max">
+
+              </div>
+              <div class="task_list-inner-item-img-min">
+
+              </div>
+
+            </div>
+          </div>
+          <!-- <div class="task_list-inner-item task2">
               <div class="task_list-inner-item-text">
                 <h2>
                   Отражайте движение ремонта в реальном времени
@@ -60,11 +77,12 @@
                 <img src="./img/task4.svg" alt="">
               </div>
             </div> -->
-          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
     </main>
     <script src="js/app.min.js"></script>
-  </body>
+</body>
+
 </html>
