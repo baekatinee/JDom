@@ -1,0 +1,60 @@
+const swiper = new Swiper('.swiper-teachers', {
+   // Optional parameters
+   direction: 'horizontal',
+   //loop: true,
+   slidesPerView: 4,
+   spaceBetween: 40,
+ 
+   // If we need pagination
+   pagination: {
+     el: '.swiper-pagination',
+   },
+ 
+   // Navigation arrows
+   navigation: {
+     nextEl: '.swiper-button-next',
+     prevEl: '.swiper-button-prev',
+   },
+ 
+   // And if we need scrollbar
+   scrollbar: {
+     el: '.swiper-scrollbar',
+   },
+   breakpoints:{
+      320:{
+        slidesPerView: 1,
+        simulateTouch: true,
+      },
+      992:{
+        slidesPerView: 4,
+        simulateTouch: false,
+      }
+   }
+ });
+ new Swiper('.image-slider');
+ new Swiper('.imag4e-slider', {
+  direction: 'horizontal',
+  //autoplay: true,
+  //speed: 300,
+  //grabCursor: true,
+  //simulateTouch: false,
+  //touchRatio: 1,
+  //touchAngle: 45,
+  //autoHeight: true,
+  slidesPerView:1,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  /*breakpoints:{
+      320:{
+        slidesPerView: 1,
+        simulateTouch: true,
+      },
+      992:{
+        slidesPerView: 2,
+        simulateTouch: false,
+      }
+   },*/
+ });
