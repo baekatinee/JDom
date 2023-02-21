@@ -10,6 +10,8 @@ vmin – наименьшее из (vw, vh), в IE9 обозначается vm
 vmax – наибольшее из (vw, vh)
 */
 
+//////////variables//////////////
+
 .container {
   width: 95vw;
   margin: 0 auto;
@@ -17,6 +19,13 @@ vmax – наибольшее из (vw, vh)
 }
 .main {
   overflow-x: hidden;
+}
+@mixin title {
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.96);
+  font-size: 2.8vw;
+  text-align: center;
+  margin-bottom: 4vw;
 }
 @mixin btn-style($bgcolor) {
   box-shadow: 0px 5px 20px -8px rgba(126, 76, 47, 0.6);
@@ -33,13 +42,15 @@ vmax – наибольшее из (vw, vh)
   background: $bgcolor;
 }
 body {
-  height: 400vh;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), #ffffff;
   font-family: "Lato", sans-serif;
+  font-size: 0.8vw;
   ////HEADER/////////////////////////////////////////////////////////////////////////////////
   header {
-    background: radial-gradient(41.72% 84.72% at 41.76% 96.93%, #ffb51b 0%, #ffcd64 100%);
-    margin-bottom: 35vh;
+    background: url(../img/bg.svg) no-repeat center center;
+    background-size: cover;
+    margin-bottom: 15vw;
+
     .header_inner {
       display: flex;
       flex-direction: column;
@@ -55,12 +66,37 @@ body {
           @include btn-style(#fff);
         }
       }
-      &-lg {
-        width: 9vw;
-        height: 6vw;
-        background: url(../img/logo.svg) center center no-repeat;
-        background-size: contain;
+      &-menu {
+        width: 85vw;
+        margin-bottom: 3vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-list {
+          ul {
+            display: flex;
+            li + li {
+              margin-left: 60px;
+            }
+            li {
+              text-transform: uppercase;
+              list-style-type: none;
+              a {
+                text-decoration: none;
+                color: rgba(0, 0, 0, 0.8);
+                font-weight: 600;
+              }
+            }
+          }
+        }
+        &-lg {
+          width: 9vw;
+          height: 4vw;
+          background: url(../img/logo.svg) center center no-repeat;
+          background-size: contain;
+        }
       }
+
       &-info {
         display: flex;
         width: 95vw;
@@ -79,7 +115,7 @@ body {
             }
             .val2 {
               position: absolute;
-              top: -30%;
+              top: -20%;
               left: 15%;
               img {
                 width: 40vw;
@@ -93,9 +129,10 @@ body {
           flex-direction: column;
           padding: 2vw 0;
           h1 {
-            line-height: 4vw;
+            width: 40vw;
+            line-height: 3.5vw;
             font-weight: 800;
-            font-size: 4vw;
+            font-size: 3.5vw;
             color: #ffffff;
           }
           h2 {
@@ -104,7 +141,7 @@ body {
             font-size: 1.93vw;
             margin-top: 0;
             margin-bottom: 3vw;
-            color: rgba(70, 47, 41, 1);
+            color: rgba(0, 0, 0, 0.6);
           }
           .header_inner-info-btns {
             display: flex;
@@ -112,13 +149,9 @@ body {
             &-btn {
               margin-right: 1vw;
               margin-bottom: 1vw;
-
               &.btn1 {
                 @include btn-style(#000);
                 color: #fff;
-              }
-              &.btn2 {
-                @include btn-style(#fff);
               }
             }
           }
@@ -126,11 +159,16 @@ body {
       }
     }
   }
+  /////////////////////////////////////////////////////////////////////TASK-SECTION//////////////////////////
+
   .container.task {
+    .task_list-title {
+      @include title;
+    }
     width: 80vw;
     margin: 0 auto;
     .task_list-inner {
-      margin-bottom: 35vh;
+      margin-bottom: 10vw;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -143,7 +181,6 @@ body {
           width: 40vw;
           &-info {
             display: flex;
-            height: 100vh;
             flex-direction: column;
             &-title {
               margin-bottom: 5vh;
@@ -152,7 +189,7 @@ body {
             h2 {
               font-weight: 800;
               margin: 1px 0;
-              font-size: 2.6vw;
+              font-size: 2vw;
             }
             h3 {
               margin: 1px 0;
@@ -198,12 +235,124 @@ body {
               background: url(../img/phoneMockup2.svg) center center no-repeat;
             }
           }
+        }
+      }
+    }
+  }
+}
 
-          &-min {
+///////////features-list/////////
+.features_list {
+  margin-bottom: 10vw;
+  &-title {
+    @include title;
+  }
+  &-inner {
+    width: 80vw;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex;
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &-info {
+        font-weight: 600;
+        font-size: 1.3vw;
+        text-align: center;
+        width: 25vw;
+      }
+      &-img {
+        margin-bottom: 2vw;
+        height: 35vh;
+        width: 25vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+/////////statistics////////
+.container.statistics {
+  .statistics-title {
+    @include title;
+  }
+  .statistics-inner {
+    margin-bottom: 10vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    &-img {
+      width: 40vw;
+      margin-bottom: 4vw;
+      img {
+        width: 100%;
+      }
+    }
+    &-btns {
+      &-btn {
+        @include btn-style(rgba(22, 19, 18, 1));
+        color: #fff;
+      }
+    }
+  }
+}
+
+//////////footer////
+footer {
+  background: #fff;
+  padding: 4vw 0;
+  .footer_inner {
+    font-size: 1.4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-developer {
+      display: flex;
+      font-size: 0.8vw;
+      &-logo {
+        margin-right: 1vw;
+      }
+    }
+    &-info {
+      width: 90vw;
+      margin: 0 auto 4vw auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 800;
+      &-time {
+        color: #000000;
+        opacity: 0.65;
+        width: 21vw;
+        font-weight: 400;
+      }
+      &-list {
+        width: 40vw;
+        display: flex;
+        justify-content: space-between;
+        &-phone {
+          display: flex;
+          align-items: center;
+
+          &-number {
+            margin-right: 1vw;
+          }
+          &-icons {
+            img + img {
+              margin-right: 0.5vw;
+            }
           }
         }
       }
     }
   }
-  /////////////////////////////////////////////////////////////////////TASK-SECTION//////////////////////////
 }
