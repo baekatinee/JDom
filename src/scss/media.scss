@@ -1,0 +1,40 @@
+@media (max-width:975px) {
+    body {
+        header {
+            .header_inner {
+                position: relative;
+                &-menu {
+                    &-burger {
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        right: 1vw;
+                        z-index: 2;
+                    }
+                    &-title {
+                        display: block;
+                    }
+                    &-list {
+                        display: none;
+                        position: absolute;
+                        top: 2vw;
+                        z-index: 1;
+                        width: 90vw;
+                        ul {
+                            padding-left: 0;
+                            flex-direction: column;
+                            li+li{
+                                margin-left: 0;
+                            }
+                            li {
+                               
+                                text-align: center;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
