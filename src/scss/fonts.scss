@@ -2,6 +2,8 @@
 	font-family: Lato;
 	font-display: swap;
 	src: url("../fonts/Lato-ExtraBold.ttf") format("truetype"), 
+	url("../fonts/Lato-ExtraBold.woff2") format("woff2"),
+	url("../fonts/Lato-ExtraBold.eot") format("eot"),
 	url("../fonts/Lato-ExtraBold.woff") format("woff");
 	font-weight: 800;
 	font-style: normal;
@@ -10,6 +12,8 @@
 	font-family: Lato;
 	font-display: swap;
 	src: url("../fonts/Lato-Medium.ttf") format("truetype"), 
+	url("../fonts/Lato-Medium.woff2") format("woff2"), 
+	url("../fonts/Lato-Medium.eot") format("eot"), 
 	url("../fonts/Lato-Medium.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
@@ -18,6 +22,8 @@
 	font-family: Lato;
 	font-display: swap;
 	src: url("../fonts/Lato-Bold.ttf") format("truetype"), 
+	url("../fonts/Lato-Bold.woff2") format("woff2"), 
+	url("../fonts/Lato-Bold.eot") format("eot"), 
 	url("../fonts/Lato-Bold.woff") format("woff");
 	font-weight: 700;
 	font-style: normal;
@@ -26,6 +32,8 @@
 	font-family: Lato;
 	font-display: swap;
 	src: url("../fonts/Lato-SemiBold.ttf") format("truetype"),
+	url("../fonts/Lato-SemiBold.woff2") format("woff2"),
+	url("../fonts/Lato-SemiBold.eot") format("eot"),
 	 url("../fonts/Lato-SemiBold.woff") format("woff");
 	font-weight: 600;
 	font-style: normal;
