@@ -265,12 +265,13 @@ header {
   &-inner {
     margin: 0 auto;
     flex-wrap: wrap;
+
     justify-content: space-between;
     display: flex;
     width: 90%;
     &-item {
       display: flex;
-      width: 33.333%;
+      width: 33%;
       flex-direction: column;
       align-items: center;
       &-info {
@@ -278,10 +279,12 @@ header {
         font-size: 1.5rem;
         font-size: calc(0.6rem + 8 * (100vw - 320px) / 880);
         text-align: center;
-        width: 80%;
+        width: 90%;
       }
       &-img {
-        margin-bottom: 2vw;
+        width: 50%;
+        height: 70%;
+        margin-bottom: 2vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -289,6 +292,20 @@ header {
           width: 100%;
           height: 100%;
         }
+        // &.img1 {
+
+        //   background: url(../img/feature1.svg) center center  no-repeat;
+        //   background-size: contain;
+        // }
+        // &.img2 {
+
+        //   background: url(../img/feature1.svg)  center center no-repeat;
+        //   background-size: contain;
+        // }
+        // &.img3 {
+        //   background: url(../img/feature3.svg)  center center  no-repeat;
+        //   background-size: contain;
+        // }
       }
     }
   }
@@ -337,31 +354,62 @@ header {
     background-size: contain;
     .container.history {
       width: 80vw;
-
+      .a11y-slider-prev {
+        transform: translateY(-50%);
+        top: 50%;
+        z-index: 100;
+        position: absolute;
+        background: url(../img/slider-arrow.svg) center center no-repeat;
+        background-size: contain;
+        width: 3rem;
+        border: none;
+        left: -5%;
+        height: 3rem;
+        font-size: 0;
+      }
+      .a11y-slider-next {
+        transform: rotate(180deg) translateY(50%);
+        top: 50%;
+        z-index: 100;
+        position: absolute;
+        background: url(../img/slider-arrow.svg) center center;
+        background-size: contain;
+        width: 3rem;
+        border: none;
+        right: -5%;
+        height: 3rem;
+        font-size: 0;
+      }
       .history_inner {
         flex: 0 0 auto;
         &-slide {
           display: flex;
           align-items: center;
+          justify-content: space-between;
+          margin: 0 auto;
           &-img {
             display: flex;
+            width: 45%;
             justify-content: center;
             img {
-              width: 60%;
+              width: 100%;
             }
           }
           &-info {
-            width: 30%;
+            width: 45%;
             &-title {
               color: rgba(255, 255, 255, 0.96);
               font-weight: 800;
-              margin-bottom: 2rem;
-              font-size: 3rem;
+              margin-bottom:  1rem;
+              font-size: 2.5rem;
+              width: 70%;
+              font-size: calc(1.6rem + 6 * (100vw - 320px) / 880);
             }
             &-box {
               color: rgba(0, 0, 0, 0.6);
               width: 75%;
               font-size: 1.4rem;
+              font-size: calc(0.8rem + 3 * (100vw - 320px) / 880);
             }
           }
         }

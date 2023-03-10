@@ -45,10 +45,9 @@
     .rates {
         .container.rate {
             .rate_inner {
-
-                &-item{
+                &-item {
                     width: 30%;
-                    &.pro{
+                    &.pro {
                         width: 30%;
                     }
                 }
@@ -106,6 +105,13 @@
     .container {
         width: 90vw;
     }
+    .features_list-inner {
+        &-item {
+            &-img {
+                height: auto;
+            }
+        }
+    }
     .questions {
         .container.questions {
             width: 85vw;
@@ -124,11 +130,29 @@
         }
     }
 }
+@media (max-width: 650px) {
+    .container {
+        width: 90vw;
+    }
+    .features_list-inner {
+        align-items: center;
+        &-item {
+            margin: 5% auto;
+            width: 80%;
+            &-img {
+              height: 70%;
+            }
+            &-info{
+                width: 50%;
+                font-size: 0.9rem;
+            }
+        }
+    }
 
+}
 // Mobile screen
 
-@media (max-width: 450px) {
-}
+
 @media (max-width: 460px) {
     footer {
         .footer_inner {
