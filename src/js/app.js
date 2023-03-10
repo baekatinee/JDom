@@ -30,5 +30,7 @@ $('.header_inner-menu-burger-menu').on('click', function() {
     slidesToShow: 1,
     arrows: true, // arrows enabled 767px and down
     dots: false,
-   
+    customPaging: function(index, a11ySlider) {
+      return '<button class="mycustombtn">' + index + '</button>';
+  }
   });
