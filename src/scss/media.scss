@@ -56,6 +56,32 @@
     }
 }
 @media (max-width: 975px) {
+    .history-section {
+        .history_wrapper {
+            .container.history {
+                .history_inner {
+                    &-slide {
+                        &-info {
+                            width: 50%;
+                            &-title {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                .a11y-slider-prev {
+                    left: -10%;
+                    height: 2.4rem;
+                    width: 2.4rem;
+                }
+                .a11y-slider-next {
+                    right: -10%;
+                    height: 2.4rem;
+                    width: 2.4rem;
+                }
+            }
+        }
+    }
     header {
         .header_inner {
             .header_inner-info-img {
@@ -102,6 +128,7 @@
 // Tablet screen
 
 @media (max-width: 768px) {
+
     .container {
         width: 90vw;
     }
@@ -112,6 +139,7 @@
             }
         }
     }
+
     .questions {
         .container.questions {
             width: 85vw;
@@ -134,24 +162,56 @@
     .container {
         width: 90vw;
     }
+    .history-section {
+        .history_wrapper {
+            background: url(../img/hisroties-mobile-blur.svg) no-repeat;
+            background-size: contain;
+            background-origin: border-box;
+            .container.history {
+                .a11y-slider-prev {
+                    left: -12%;
+                    height: 2.4rem;
+                    width: 2.4rem;
+                }
+                .a11y-slider-next {
+                    right: -12%;
+                    height: 2.4rem;
+                    width: 2.4rem;
+                }
+                .history_inner {
+                    &-slide {
+                        flex-direction: column;
+                        margin-bottom: 3rem;
+                        &-img {
+                            width: 100%;
+                        }
+                        &-info {
+                            width: 100%;
+                            &-box {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     .features_list-inner {
         align-items: center;
         &-item {
             margin: 5% auto;
             width: 80%;
             &-img {
-              height: 70%;
+                height: 70%;
             }
-            &-info{
+            &-info {
                 width: 50%;
                 font-size: 0.9rem;
             }
         }
     }
-
 }
 // Mobile screen
-
 
 @media (max-width: 460px) {
     footer {
