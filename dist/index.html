@@ -5,6 +5,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="css/style.min.css">
+   <link rel="stylesheet" href="//unpkg.com/a11y-slider@latest/dist/a11y-slider.css" />
    <title>Главная</title>
 </head>
 
@@ -15,14 +16,38 @@
         <div class="header_inner">
             <div class="header_inner-btns">
                 <button class="header_inner-btns-btn">
-                  Как это работает
+                    Как это работает
                 </button>
                 <button class="header_inner-btns-btn">
-                  Тарифы
+                    Тарифы
                 </button>
-              </div>
-            <div class="header_inner-lg">
             </div>
+            <div class="header_inner-menu">
+                <div class="header_inner-menu-lg">
+                </div>
+                <div class="header_inner-menu-burger">
+                    <div class="header_inner-menu-title">
+                        меню
+                    </div>
+                    <div class="header_inner-menu-burger-menu">
+                        <div class="header_inner-menu-burger-menu-lines">
+                            <div class="header_inner-menu-burger-menu-lines-line"></div>
+                            <div class="header_inner-menu-burger-menu-lines-line second"></div>
+                            <div class="header_inner-menu-burger-menu-lines-line"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header_inner-menu-list">
+                    <ul>
+                        <li><a href="">Как это работает</a></li>
+                        <li><a href="">вопросы</a></li>
+                        <li><a href="">Тарифы</a></li>
+                        <li><a href="">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="header_inner-info">
                 <div class="header_inner-info-img">
                     <div class="header_inner-info-img-inner">
@@ -34,21 +59,20 @@
                 </div>
                 <div class="header_inner-info-text">
                     <h1>
-                        Ремонт под контролем
-                        и без сюрпризов!
+                        Управляйте всеми
+                        <p>
+                            проектами по ремонту
+
+                        <p>в одном месте </p>
                     </h1>
                     <h2>
-                        j-DOM — приложение для ведения ремонтов и архитектурных проектов
+                        j-DOM — приложение для ведения ремонтов <p>
+                            и архитектурных проектов
+                        </p>
                     </h2>
                     <div class="header_inner-info-btns">
                         <button class="header_inner-info-btns-btn btn1">
                             У-м-м-м, подробнее ↓
-                        </button>
-                        <button class="header_inner-info-btns-btn btn2">
-                            Как это работает
-                        </button>
-                        <button class="header_inner-info-btns-btn btn2">
-                            Тарифы
                         </button>
                     </div>
                 </div>
@@ -57,10 +81,49 @@
     </div>
 </header>
     <main>
+
+      <section class="features_list">
+        <div class="container features">
+          <div class="features_list-title">
+            Зачем вам использовать JDom?
+          </div>
+          <div class="features_list-inner">
+            <div class="features_list-inner-item">
+              <div class="features_list-inner-item-img img1">
+                <img src="img/feature1.svg">
+              </div>
+              <div class="features_list-inner-item-info">
+                Быстро и удобно посчитать смету проектов
+              </div>
+            </div>
+            <div class="features_list-inner-item">
+              <div class="features_list-inner-item-img img2">
+                <img src="img/feature1.svg">
+              </div>
+              <div class="features_list-inner-item-info">
+                Организовать команду и назначить каждому свою работу
+              </div>
+            </div>
+            <div class="features_list-inner-item">
+              <div class="features_list-inner-item-img img3">
+                <img src="img/feature3.svg">
+              </div>
+              <div class="features_list-inner-item-info">
+                Оперативно информировать
+                заказчика об этапах готовности проекта
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="task_list">
         <div class="container task">
+          <div class="task_list-title">
+            Контролируй вместе с jDOM
+          </div>
           <div class="task_list-inner">
-            <div class="task_list-inner-item task1" id="i1">
+            <div class="task_list-inner-item task1">
               <div class="task_list-inner-item-text">
                 <div class="task_list-inner-item-text-info">
                   <div class="task_list-inner-item-text-info-title">
@@ -76,89 +139,322 @@
                     <h3> на начальном этапе</h3>
                   </div>
                 </div>
-                <div class="task_list-inner-item-text-info">
-                  <div class="task_list-inner-item-text-info-title">
-                    <h2>
-                      Забудьте о проблемах
-                    </h2>
-                    <h2>
-                      при общении с заказчиком
-                    </h2>
-                  </div>
-                  <div class="task_list-inner-item-text-info-subtitle">
-                    <h3>Определяйте работы и сроки выполнения </h3>
-                    <h3> на начальном этапе</h3>
-                  </div>
-                </div>
-                <div class="task_list-inner-item-text-info">
-                  <div class="task_list-inner-item-text-info-title">
-                    <h2>
-                      Отражайте движение ремонта
-                    </h2>
-                    <h2>
-                      в реальном времени
-                    </h2>
-                  </div>
-                  <div class="task_list-inner-item-text-info-subtitle">
-                    <h3>Отмечайте готовность проекта и подкрепляйте </h3>
-                    <h3>результаты фотоотчетом — клиент всё видит сам </h3>
-                    <h3>и не задает глупых вопросов</h3>
-                  </div>
-                </div>
-              </div>
-
-              <div class="task_list-inner-item-img task1">
-                <figure>
-                  <div class="base">
-
-                  </div>
-                  <div class="phone-mockup">
-
-                  </div>
-                </figure>
               </div>
             </div>
-            <!-- <div class="task_list-inner-item task2">
-                <div class="task_list-inner-item-text">
-                  <h2>
-                    Отражайте движение ремонта в реальном времени
-                  </h2>
-                  <h3>Отмечайте готовность проекта и подкрепляйте результаты фотоотчетом — клиент всё видит сам и не задает глупых вопросов</h3>
+          </div>
+        </div>
+      </section>
+      <section class="statistics">
+        <div class="container statistics">
+          <div class="statistics-title">
+            Ведение проектов может быть проще и быстрее
+          </div>
+          <div class="statistics-inner">
+            <div class="statistics-inner-img">
+              <img src="img/diagramma.svg" alt="">
+            </div>
+            <div class="statistics-inner-btns">
+              <button class="statistics-inner-btns-btn">
+                попробовать JDOM бесплатно
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="history-section">
+        <div class="container history">
+          <div class="history_title">
+            Настоящие истории
+          </div>
+        </div>
+        <div class="history_wrapper">
+          <div class="container history">
+            <div class="history_inner">
+              <div class="history_inner-slide">
+                <div class="history_inner-slide-img">
+                  <img src="img/slide1.gif" alt="">
                 </div>
-                <div class="task_list-inner-item-img">
-                  <img src="./img/task2.svg" alt="">
+                <div class="history_inner-slide-info">
+                  <div class="history_inner-slide-info-title">
+                    В процессе реализации проекта появлялись неучтенные расходы
+                  </div>
+                  <div class="history_inner-slide-info-box">
+                    В j-DOM вы заносите любые дополнительные расходы для качественного учета средств проекта
+                  </div>
                 </div>
               </div>
-              <div class="task_list-inner-item task3">
-                <div class="task_list-inner-item-text">
-                  <h2>
-                    Фиксируйте дополнительные расходы
-                  </h2>
-                  <h3>Добавляйте чеки после покупки дополнительных материалов. Ваши расходы не должны утонуть в потоке информации</h3>
+              <div class="history_inner-slide">
+                <div class="history_inner-slide-img">
+                  <img src="img/slide2.gif" alt="">
                 </div>
-                <div class="task_list-inner-item-img">
-                  <img src="./img/task3.svg" alt="">
+                <div class="history_inner-slide-info">
+                  <div class="history_inner-slide-info-title">
+                    Приходилось вести
+                    бумажный учет
+                    по каждому проекту
+                  </div>
+                  <div class="history_inner-slide-info-box">
+                    В j-DOM вы ведете понятный отчет о ходе работ всех проектов 
+                  </div>
                 </div>
               </div>
-              <div class="task_list-inner-item task4">
-                <div class="task_list-inner-item-text">
-                  <h2>
-                    Храните документы по объекту в одном месте
-                  </h2>
-                  <h3>Загружайте все документы прямо на смартфон</h3>
+              <div class="history_inner-slide">
+                <div class="history_inner-slide-img">
+                  <img src="img/slide3.png" alt="">
                 </div>
-                <div class="task_list-inner-item-img">
-                  <img src="./img/task4.svg" alt="">
+                <div class="history_inner-slide-info">
+                  <div class="history_inner-slide-info-title">
+                    Сроки работ часто выставлялись слишком размыто
+                  </div>
+                  <div class="history_inner-slide-info-box">
+                    В j-DOM вы отслеживаете процесс выполнения работ для точного опредения сдачи проекта
+                  </div>
                 </div>
-              </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="usability">
+        <div class="container usability">
+          <div class="usability_inner">
+            <div class="usability_inner-info">
+              <div class="usability_inner-info-title">
+                Уже используют приложение
+                в работе
+              </div>
+
+              <div class="usability_inner-info-box">
+                Профессионалы из разных сфер работают с jDOM
+              </div>
+              <div class="usability_inner-info-btn">
+                <button>начать пользоваться</button>
+              </div>
+            </div>
+            <div class="usability_inner-images">
+              <div class="usability_inner-images-img">
+                <img src="img/usability1.svg" alt="">
+                <div class="usability_inner-images-img-title">
+                  Арткуб
+                </div>
+              </div>
+              <div class="usability_inner-images-img">
+                <img src="img/usability1.svg" alt="">
+                <div class="usability_inner-images-img-title">
+                  Арткуб
+                </div>
+              </div>
+              <div class="usability_inner-images-img">
+                <img src="img/usability1.svg" alt="">
+                <div class="usability_inner-images-img-title">
+                  Арткуб
+                </div>
+              </div>
+              <div class="usability_inner-images-img">
+                <img src="img/usability1.svg" alt="">
+                <div class="usability_inner-images-img-title">
+                  Арткуб
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="questions">
+        <div class="container questions">
+          <div class="question_title">
+            Остались вопросы?
+          </div>
+          <div class="question_inner">
+            <div class="question_inner-question">
+              <div class="question_inner-question-info">
+                <div class="question_inner-question-info-title">
+                  Как оплачивать подписку?
+                </div>
+                <div class="question_inner-question-info-arrow">
+                  <img src="img/arrow-question.svg" alt="">
+                </div>
+              </div>
+              <div class="question_inner-question-box">
+                Оформить и оплатить тариф jDom можно в веб-версии с компьютера или телефона.
+              </div>
+            </div>
+            <div class="question_inner-question">
+              <div class="question_inner-question-info">
+                <div class="question_inner-question-info-title">
+                  Как отменить платную подписку?
+                </div>
+                <div class="question_inner-question-info-arrow">
+                  <img src="img/arrow-question.svg" alt="">
+                </div>
+              </div>
+              <div class="question_inner-question-box">
+                Оформить и оплатить тариф jDom можно в веб-версии с компьютера или телефона.
+              </div>
+            </div>
+            <div class="question_inner-question">
+              <div class="question_inner-question-info">
+                <div class="question_inner-question-info-title">
+                  Как пользоваться сервисом?
+                </div>
+                <div class="question_inner-question-info-arrow">
+                  <img src="img/arrow-question.svg" alt="">
+                </div>
+              </div>
+              <div class="question_inner-question-box">
+                Оформить и оплатить тариф jDom можно в веб-версии с компьютера или телефона.
+              </div>
+            </div>
+            <div class="question_inner-question">
+              <div class="question_inner-question-info">
+                <div class="question_inner-question-info-title">
+                  Не могу добавить исполнителя в команду, что делать?
+                </div>
+                <div class="question_inner-question-info-arrow">
+                  <img src="img/arrow-question.svg" alt="">
+                </div>
+              </div>
+              <div class="question_inner-question-box">
+                Оформить и оплатить тариф jDom можно в веб-версии с компьютера или телефона.
+              </div>
+            </div>
+            <div class="question_inner-question">
+              <div class="question_inner-question-info">
+                <div class="question_inner-question-info-title">
+                  Как добавить новый чек?
+                </div>
+                <div class="question_inner-question-info-arrow">
+                  <img src="img/arrow-question.svg" alt="">
+                </div>
+              </div>
+              <div class="question_inner-question-box">
+                Оформить и оплатить тариф jDom можно в веб-версии с компьютера или телефона.
+              </div>
+            </div>
+            <div class="question_inner-question">
+              <div class="question_inner-question-info">
+                <div class="question_inner-question-info-title">
+                  Как внести изменения в Тарифы?
+                </div>
+                <div class="question_inner-question-info-arrow">
+                  <img src="img/arrow-question.svg" alt="">
+                </div>
+              </div>
+              <div class="question_inner-question-box">
+                Оформить и оплатить тариф jDom можно в веб-версии с компьютера или телефона.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="rates">
+        <div class="container rate">
+          <div class="rate_title">
+            Тарифы для проектов
+          </div>
+          <div class="rate_inner">
+            <div class="rate_inner-item">
+              <div class="rate_inner-item-title">
+                Старт
+              </div>
+              <div class="rate_inner-item-price">
+                $ 0
+              </div>
+              <div class="rate_inner-item-info">
+                Для всех, кто хочет попробовать j-DOM с базовым функционалом
+              </div>
+              <div class="rate_inner-item-list">
+                <ul>
+                  <li>3 проекта</li>
+                  <li>6 членов команды для проекта</li>
+                  <li>До 20 загружаемых фото</li>
+                </ul>
+              </div>
+              <div class="rate_inner-item-btn">
+                попробовать бесплатно
+              </div>
+            </div>
+            <div class="rate_inner-item pro">
+              <div class="rate_inner-item-title pro">
+                PRO
+              </div>
+              <div class="rate_inner-item-price">
+                <div class="rate_inner-item-price-number">
+                  $ 10
+                </div>
+                <div class="rate_inner-item-price-month">
+                  / в месяц
+                </div>
+              </div>
+              <div class="rate_inner-item-info">
+                Подойдет для индивидуальных подрядчиков и профессиональных команд для ведения проектов любой сложности
+              </div>
+              <div class="rate_inner-item-list">
+                <ul>
+                  <li>Неограниченное количество проектов</li>
+                  <li>Неограниченные члены команды для проекта</li>
+                  <li>Безлимитная загрузка фото</li>
+                  <li>Добавление материалов заказчика</li>
+                  <li>Добавление документов</li>
+                </ul>
+              </div>
+              <div class="rate_inner-item-btn pro">
+                Подписаться на Pro
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="footer">
+    <div class="container footer">
+        <div class="footer_inner">
+            <div class="footer_inner-info">
+                <div class="footer_inner-info-time">
+                    Работаем каждый будний день с 10 до 19
+                </div>
+                <div class="footer_inner-info-list">
+                    <div class="footer_inner-info-list-phone">
+                        <div class="footer_inner-info-list-phone-number">
+                            +375 44 727-65-99
+                        </div>
+                        <div class="footer_inner-info-list-phone-icons">
+                            <img src="../img/viber.svg" alt="">
+                            <img src="../img/tg.svg" alt="">
+                        </div>
+    
+                    </div>
+                    <div class="footer_inner-info-list-phone">
+                        <div class="footer_inner-info-list-phone-number">
+                            +375 29 632-99-52
+                        </div>
+                        <div class="footer_inner-info-list-phone-icons">
+                            <img src="../img/viber.svg" alt="">
+                            <img src="../img/tg.svg" alt="">
+                        </div>
+                    </div>
+                </div>  
+                <div class="footer_inner-info-mail">
+                    list@jdom.by
+                </div>
+            </div>
+            <div class="footer_inner-developer">
+                <div class="footer_inner-developer-logo">
+                    <img src="../img/pras-logo.svg" alt="">
+                </div>
+                <div class="footer_inner-developer-info">
+                    Разработка сайта — компания PRAS
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//unpkg.com/a11y-slider@latest/dist/a11y-slider.js"></script>
     <script src="js/app.min.js"></script>
 </body>
 
